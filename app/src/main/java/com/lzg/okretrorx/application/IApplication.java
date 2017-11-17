@@ -2,6 +2,8 @@ package com.lzg.okretrorx.application;
 
 import android.app.Application;
 
+import com.lzg.okretrorx.http.IApi;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Cache;
@@ -55,6 +57,12 @@ public class IApplication extends Application {
                 .build();
     }
 
+    /**
+     * 初始化Api
+     */
+    public IApi initIApi() {
 
+        return retrofit.create(IApi.class);
+    }
 
 }
