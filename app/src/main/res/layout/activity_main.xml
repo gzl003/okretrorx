@@ -15,7 +15,8 @@
         android:ems="10"
         android:inputType="phone"
         tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="125dp" />
+        tools:layout_editor_absoluteY="125dp"
+        android:visibility="gone"/>
 
     <EditText
         android:id="@+id/password"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:visibility="gone"
         tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="209dp" />
 

@@ -50,7 +50,8 @@ public class IApplication extends Application {
     }
 
     private void initRetrofit() {
-        retrofit = new Retrofit.Builder().baseUrl("BASE_URL")
+        //https://qapreview.huanxi.com/a/showing50.json
+        retrofit = new Retrofit.Builder().baseUrl("https://qapreview.huanxi.com/")
                 .addConverterFactory(FastJsonConverterFactory.create())//用来统一解析ResponseBody返回数据的。
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//通过addCallAdapterFactory来添加对RxJava的支持
                 .client(mOkHttpClient)
@@ -61,7 +62,6 @@ public class IApplication extends Application {
      * 初始化Api
      */
     public IApi initIApi() {
-
         return retrofit.create(IApi.class);
     }
 
